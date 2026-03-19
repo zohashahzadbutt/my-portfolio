@@ -6,18 +6,7 @@
 <title>Zoha Shahzad Butt | Content Writer Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root {
-  --bg: #faf9f7;
-  --ink: #111110;
-  --ink-secondary: #2a2a28;
-  --accent: #c44b2b;
-  --accent-soft: #e8d5ce;
-  --muted: #5a5650;
-  --cream: #f0ede8;
-  --border: #ddd8d0;
-  --card: #ffffff;
-  --gradient-warm: linear-gradient(135deg, #c44b2b 0%, #e06b4a 50%, #d4883e 100%);
-}
+:root{--bg:#faf9f7;--ink:#111110;--ink-secondary:#2a2a28;--accent:#c44b2b;--accent-soft:#e8d5ce;--muted:#5a5650;--cream:#f0ede8;--border:#ddd8d0;--card:#ffffff;--gradient-warm:linear-gradient(135deg,#c44b2b 0%,#e06b4a 50%,#d4883e 100%)}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;font-size:16px}
 body{font-family:'Manrope',sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
@@ -28,21 +17,23 @@ body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;opaci
 .fade-up{opacity:0;transform:translateY(40px);transition:opacity .7s ease,transform .7s ease}
 .fade-up.visible{opacity:1;transform:translateY(0)}
 
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.2rem 3rem;display:flex;justify-content:space-between;align-items:center;background:rgba(250,249,247,0.85);backdrop-filter:blur(20px);border-bottom:1px solid transparent;transition:border-color .3s ease,padding .3s ease}
-nav.scrolled{border-bottom-color:var(--border);padding:.8rem 3rem}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.2rem 4rem;display:flex;justify-content:space-between;align-items:center;background:rgba(250,249,247,0.85);backdrop-filter:blur(20px);border-bottom:1px solid transparent;transition:border-color .3s,padding .3s}
+nav.scrolled{border-bottom-color:var(--border);padding:.8rem 4rem}
 .nav-logo{font-family:'Playfair Display',serif;font-weight:700;font-size:1.3rem;letter-spacing:-0.02em;color:var(--ink);text-decoration:none}
 .nav-logo span{color:var(--accent)}
 .nav-links{display:flex;gap:2.5rem;align-items:center}
-.nav-links a{text-decoration:none;color:var(--muted);font-size:.85rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;transition:color .3s ease;position:relative}
-.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1.5px;background:var(--accent);transition:width .3s ease}
+.nav-links a{text-decoration:none;color:var(--muted);font-size:.85rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;transition:color .3s;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1.5px;background:var(--accent);transition:width .3s}
 .nav-links a:hover{color:var(--ink)}
 .nav-links a:hover::after{width:100%}
-.nav-cta{background:var(--ink)!important;color:var(--bg)!important;padding:.6rem 1.5rem!important;border-radius:100px;font-size:.82rem!important;letter-spacing:.04em!important;transition:background .3s ease,transform .2s ease!important}
+.nav-cta{background:var(--ink)!important;color:var(--bg)!important;padding:.6rem 1.5rem!important;border-radius:100px;font-size:.82rem!important;letter-spacing:.04em!important;transition:background .3s,transform .2s!important}
 .nav-cta::after{display:none!important}
 .nav-cta:hover{background:var(--accent)!important;transform:scale(1.03)}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;z-index:200;background:none;border:none;padding:4px}
-.hamburger span{width:24px;height:2px;background:var(--ink);transition:.3s ease;border-radius:2px}
+.hamburger span{width:24px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
 
+/* HERO */
 .hero{min-height:100vh;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:4rem;padding:8rem 4rem 4rem}
 .hero-label{font-size:.75rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:1.5rem;animation:fadeUp .8s ease both;display:flex;align-items:center;gap:.7rem}
 .hero-label::before{content:'';width:32px;height:1.5px;background:var(--accent);display:inline-block}
@@ -51,14 +42,14 @@ nav.scrolled{border-bottom-color:var(--border);padding:.8rem 3rem}
 .hero h1 em::after{content:'';position:absolute;bottom:6px;left:0;width:100%;height:8px;background:var(--accent-soft);z-index:-1;border-radius:4px}
 .hero-sub{font-size:1.1rem;color:var(--ink-secondary);max-width:520px;line-height:1.75;margin-top:1.8rem;font-weight:400;animation:fadeUp .8s ease .3s both}
 .hero-actions{display:flex;gap:1rem;margin-top:2.5rem;animation:fadeUp .8s ease .45s both;flex-wrap:wrap}
-.btn-primary{display:inline-flex;align-items:center;gap:.5rem;background:var(--ink);color:var(--bg);padding:1rem 2rem;border-radius:100px;text-decoration:none;font-size:.9rem;font-weight:600;letter-spacing:.02em;transition:all .3s ease;border:none;cursor:pointer}
+.btn-primary{display:inline-flex;align-items:center;gap:.5rem;background:var(--ink);color:var(--bg);padding:1rem 2rem;border-radius:100px;text-decoration:none;font-size:.9rem;font-weight:600;letter-spacing:.02em;transition:all .3s;border:none;cursor:pointer}
 .btn-primary:hover{background:var(--accent);transform:translateY(-2px)}
-.btn-secondary{display:inline-flex;align-items:center;gap:.5rem;background:transparent;color:var(--ink);padding:1rem 2rem;border-radius:100px;text-decoration:none;font-size:.9rem;font-weight:600;letter-spacing:.02em;border:1.5px solid var(--border);transition:all .3s ease;cursor:pointer}
+.btn-secondary{display:inline-flex;align-items:center;gap:.5rem;background:transparent;color:var(--ink);padding:1rem 2rem;border-radius:100px;text-decoration:none;font-size:.9rem;font-weight:600;letter-spacing:.02em;border:1.5px solid var(--border);transition:all .3s;cursor:pointer}
 .btn-secondary:hover{border-color:var(--ink);transform:translateY(-2px)}
 
 .hero-right{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;animation:fadeUp .8s ease .5s both}
-.stat-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem 1.8rem;transition:all .4s ease;position:relative;overflow:hidden}
-.stat-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:var(--gradient-warm);transform:scaleX(0);transform-origin:left;transition:transform .4s ease}
+.stat-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem 1.8rem;transition:all .4s;position:relative;overflow:hidden}
+.stat-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:var(--gradient-warm);transform:scaleX(0);transform-origin:left;transition:transform .4s}
 .stat-card:hover::before{transform:scaleX(1)}
 .stat-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,.07)}
 .stat-card .stat-number{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:800;color:var(--ink);line-height:1;margin-bottom:.5rem}
@@ -67,71 +58,89 @@ nav.scrolled{border-bottom-color:var(--border);padding:.8rem 3rem}
 .stat-card .stat-desc{font-size:.82rem;color:var(--muted);line-height:1.5;margin-top:.6rem}
 .stat-card-wide{grid-column:1/-1}
 
+/* TICKER */
 .ticker-wrap{overflow:hidden;padding:1.8rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--cream)}
 .ticker{display:flex;animation:ticker 25s linear infinite;width:max-content}
 .ticker-item{display:flex;align-items:center;gap:.6rem;padding:0 2.5rem;font-size:.85rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
 .ticker-item .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0}
 
+/* SECTIONS */
 section{padding:6rem 4rem}
 .section-label{font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;display:flex;align-items:center;gap:.7rem}
 .section-label::before{content:'';width:24px;height:1.5px;background:var(--accent)}
 .section-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:700;letter-spacing:-0.02em;line-height:1.15;margin-bottom:3rem;color:var(--ink)}
 
+/* ABOUT */
 #about{background:var(--cream)}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
 .about-text p{font-size:1.05rem;line-height:1.8;color:var(--ink-secondary);margin-bottom:1.2rem}
 .about-text p:first-of-type::first-letter{font-family:'Playfair Display',serif;font-size:3.5rem;float:left;line-height:1;margin-right:.5rem;margin-top:.1rem;color:var(--accent);font-weight:700}
 .about-details{display:flex;flex-direction:column;gap:1.5rem;padding-top:1rem}
-.detail-card{background:var(--card);padding:1.5rem 1.8rem;border-radius:12px;border:1px solid var(--border);transition:transform .3s ease,box-shadow .3s ease}
+.detail-card{background:var(--card);padding:1.5rem 1.8rem;border-radius:12px;border:1px solid var(--border);transition:transform .3s,box-shadow .3s;display:flex;gap:1.2rem;align-items:flex-start}
 .detail-card:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,.06)}
-.detail-card h4{font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem}
-.detail-card p{font-size:.95rem;font-weight:500;line-height:1.5;color:var(--ink)}
+.detail-icon{width:40px;height:40px;min-width:40px;border-radius:10px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;margin-top:0.2rem}
+.detail-icon svg{width:20px;height:20px;stroke:var(--accent);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.detail-card-content h4{font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem}
+.detail-card-content p{font-size:.95rem;font-weight:500;line-height:1.5;color:var(--ink)}
 
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
-.service-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2.2rem;transition:all .4s ease;position:relative;overflow:hidden}
-.service-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:var(--gradient-warm);transform:scaleX(0);transform-origin:left;transition:transform .4s ease}
+/* SERVICES */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.service-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2.2rem;transition:all .4s;position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:var(--gradient-warm);transform:scaleX(0);transform-origin:left;transition:transform .4s}
 .service-card:hover::before{transform:scaleX(1)}
 .service-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,.07)}
-.service-num{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:700;color:var(--accent);line-height:1;margin-bottom:1.2rem}
-.service-card:hover .service-num{color:var(--accent-soft)}
+.service-icon{width:48px;height:48px;border-radius:12px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem}
+.service-icon svg{width:24px;height:24px;stroke:var(--accent);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .service-card h3{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;margin-bottom:.8rem;color:var(--ink)}
 .service-card p{font-size:.9rem;color:var(--muted);line-height:1.7}
 
+/* WORK */
 #work{background:var(--cream)}
-.work-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem}
-.work-card{background:var(--card);border-radius:16px;border:1px solid var(--border);padding:2.2rem;transition:all .4s ease;cursor:pointer;display:flex;flex-direction:column;justify-content:space-between;text-decoration:none;color:inherit}
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.work-card{background:var(--card);border-radius:16px;border:1px solid var(--border);padding:2.2rem;transition:all .4s;cursor:pointer;display:flex;flex-direction:column;justify-content:space-between;text-decoration:none;color:inherit}
 .work-card:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,0,0,.07)}
 .work-tag{font-size:.68rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);display:inline-block;padding:.35rem .8rem;border-radius:100px;margin-bottom:1.2rem;width:fit-content}
-.work-card h3{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;margin-bottom:.7rem;line-height:1.3;color:var(--ink)}
+.work-card h3{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;margin-bottom:.7rem;line-height:1.3;color:var(--ink)}
 .work-card p{font-size:.88rem;color:var(--muted);line-height:1.7;margin-bottom:1.5rem;flex-grow:1}
 .work-meta{display:flex;justify-content:space-between;align-items:center;padding-top:1.2rem;border-top:1px solid var(--border)}
 .work-meta span{font-size:.78rem;color:var(--muted);font-weight:500}
 .work-meta .view-label{font-size:.75rem;font-weight:600;color:var(--accent);letter-spacing:.05em}
 .work-card:hover .view-label{text-decoration:underline}
 
-.process-container{width:100%}
-.process-step{display:flex;gap:2.5rem;padding:2.5rem 0;border-bottom:1px solid var(--border);align-items:flex-start}
-.process-step:last-child{border-bottom:none}
-.step-num{font-family:'Playfair Display',serif;font-size:3.5rem;font-weight:700;color:var(--accent);line-height:1;min-width:70px;transition:color .3s ease}
-.process-step:hover .step-num{color:var(--accent-soft)}
-.step-content h3{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;margin-bottom:.5rem;color:var(--ink)}
-.step-content p{font-size:.92rem;color:var(--muted);line-height:1.7}
+/* PROCESS */
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+.process-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem;text-align:center;transition:all .4s;position:relative}
+.process-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:var(--gradient-warm);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.process-card:hover::before{transform:scaleX(1)}
+.process-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,.07)}
+.process-icon{width:56px;height:56px;border-radius:14px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;margin:0 auto 1.2rem}
+.process-icon svg{width:26px;height:26px;stroke:var(--accent);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.process-num{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--accent);margin-bottom:.5rem}
+.process-card h3{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;margin-bottom:.6rem;color:var(--ink)}
+.process-card p{font-size:.85rem;color:var(--muted);line-height:1.6}
 
-.cta-section{text-align:center;padding:8rem 3rem}
+/* CTA */
+.cta-section{text-align:center;padding:8rem 4rem;position:relative}
 .cta-section .section-label{justify-content:center}
 .cta-section .section-label::before{display:none}
 .cta-section .section-title{margin:0 auto 1rem;max-width:700px}
 .cta-sub{font-size:1.05rem;color:var(--muted);max-width:550px;margin:0 auto 2.5rem;line-height:1.7}
 .cta-email{font-family:'JetBrains Mono',monospace;font-size:1rem;color:var(--accent);font-weight:500;margin-top:1.5rem;display:inline-block;text-decoration:none;position:relative}
-.cta-email::after{content:'';position:absolute;bottom:-2px;left:0;width:100%;height:1.5px;background:var(--accent);transform:scaleX(0);transition:transform .3s ease}
+.cta-email::after{content:'';position:absolute;bottom:-2px;left:0;width:100%;height:1.5px;background:var(--accent);transform:scaleX(0);transition:transform .3s}
 .cta-email:hover::after{transform:scaleX(1)}
 
-footer{padding:2.5rem 3rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--border);flex-wrap:wrap;gap:1rem}
+/* FOOTER */
+footer{padding:2.5rem 4rem;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--border);flex-wrap:wrap;gap:1rem}
 footer p{font-size:.8rem;color:var(--muted)}
 .footer-links{display:flex;gap:2rem}
-.footer-links a{font-size:.8rem;color:var(--muted);text-decoration:none;font-weight:500;transition:color .3s ease}
+.footer-links a{font-size:.8rem;color:var(--muted);text-decoration:none;font-weight:500;transition:color .3s}
 .footer-links a:hover{color:var(--accent)}
 
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .services-grid,.work-grid{grid-template-columns:repeat(2,1fr)}
+  .process-grid{grid-template-columns:repeat(2,1fr)}
+}
 @media(max-width:900px){
   .hero{grid-template-columns:1fr;gap:3rem;min-height:auto;padding:7rem 1.5rem 3rem}
 }
@@ -143,10 +152,9 @@ footer p{font-size:.8rem;color:var(--muted)}
   .nav-links.open a{font-size:1.2rem;color:var(--ink)}
   section{padding:4rem 1.5rem}
   .about-grid{grid-template-columns:1fr;gap:2rem}
-  .work-grid{grid-template-columns:1fr}
-  .process-step{gap:1.5rem}
-  .step-num{font-size:2.5rem;min-width:50px}
-  footer{flex-direction:column;text-align:center}
+  .services-grid,.work-grid{grid-template-columns:1fr}
+  .process-grid{grid-template-columns:1fr}
+  footer{flex-direction:column;text-align:center;padding:2rem 1.5rem}
   .hero-right{grid-template-columns:1fr}
 }
 </style>
@@ -167,6 +175,7 @@ footer p{font-size:.8rem;color:var(--muted)}
   </button>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-left">
     <div class="hero-label">Content Writer &amp; Strategist</div>
@@ -196,6 +205,7 @@ footer p{font-size:.8rem;color:var(--muted)}
   </div>
 </section>
 
+<!-- TICKER -->
 <div class="ticker-wrap">
   <div class="ticker">
     <div class="ticker-item"><span class="dot"></span>Blog Writing</div>
@@ -219,6 +229,7 @@ footer p{font-size:.8rem;color:var(--muted)}
   </div>
 </div>
 
+<!-- ABOUT -->
 <section id="about">
   <div class="about-grid">
     <div class="about-text fade-up">
@@ -229,67 +240,100 @@ footer p{font-size:.8rem;color:var(--muted)}
     </div>
     <div class="about-details fade-up">
       <div class="detail-card">
-        <h4>Industries</h4>
-        <p>SaaS &amp; Tech, Healthcare &amp; Aesthetics, Luxury &amp; Hospitality, Finance, E-commerce</p>
+        <div class="detail-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="detail-card-content">
+          <h4>Industries</h4>
+          <p>SaaS &amp; Tech, Healthcare &amp; Aesthetics, Luxury &amp; Hospitality, Finance, E-commerce</p>
+        </div>
       </div>
       <div class="detail-card">
-        <h4>Expertise</h4>
-        <p>SEO Blog Writing, PPC &amp; Landing Page Copy, Email Marketing &amp; Cold Outreach, Technical &amp; Academic Writing</p>
+        <div class="detail-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div class="detail-card-content">
+          <h4>Expertise</h4>
+          <p>SEO Blog Writing, PPC &amp; Landing Page Copy, Email Marketing &amp; Cold Outreach, Technical &amp; Academic Writing</p>
+        </div>
       </div>
       <div class="detail-card">
-        <h4>Tools &amp; Platforms</h4>
-        <p>WordPress, Google Analytics, SEMrush, Mailchimp, HubSpot, Google Ads, Google Docs &amp; Sheets</p>
+        <div class="detail-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <div class="detail-card-content">
+          <h4>Tools &amp; Platforms</h4>
+          <p>WordPress, Google Analytics, SEMrush, Mailchimp, HubSpot, Google Ads, Google Docs &amp; Sheets</p>
+        </div>
       </div>
       <div class="detail-card">
-        <h4>Based In</h4>
-        <p>Pakistan, working with clients globally across the US, UAE, and Europe</p>
+        <div class="detail-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <div class="detail-card-content">
+          <h4>Based In</h4>
+          <p>Pakistan, working with clients globally across the US, UAE, and Europe</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- SERVICES -->
 <section id="services">
   <div class="section-label fade-up">What I Do</div>
   <div class="section-title fade-up">Services built around results.</div>
   <div class="services-grid">
     <div class="service-card fade-up">
-      <div class="service-num">01</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+      </div>
       <h3>SEO &amp; Technical Writing</h3>
       <p>Research-driven, keyword-optimized articles and technical documentation that rank, engage, and establish authority. From how-to guides and whitepapers to product documentation and industry deep-dives.</p>
     </div>
     <div class="service-card fade-up">
-      <div class="service-num">02</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+      </div>
       <h3>PPC &amp; Landing Page Copy</h3>
       <p>High-converting landing pages and PPC ad copy built to maximize click-through rates and lower cost per acquisition. Persuasive headlines, benefit-driven structure, and clear calls to action.</p>
     </div>
     <div class="service-card fade-up">
-      <div class="service-num">03</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </div>
       <h3>Email Marketing</h3>
       <p>Welcome sequences, nurture flows, and promotional campaigns crafted to boost open rates, click-throughs, and conversions. Strategic, segmented, and built to perform.</p>
     </div>
     <div class="service-card fade-up">
-      <div class="service-num">04</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      </div>
       <h3>Cold Email Outreach</h3>
       <p>Multi-step email sequences that cut through inbox noise. Personalized, punchy, and built to generate replies and book meetings for B2B teams.</p>
     </div>
     <div class="service-card fade-up">
-      <div class="service-num">05</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+      </div>
       <h3>Academic &amp; Research Writing</h3>
       <p>Well-structured, thoroughly researched academic papers and business analyses. Clear argumentation, proper formatting, and deep subject-matter expertise.</p>
     </div>
     <div class="service-card fade-up">
-      <div class="service-num">06</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
       <h3>Creative &amp; Fiction Writing</h3>
       <p>Narrative-driven content, storytelling, and creative pieces that captivate readers and bring brand stories to life with personality and depth.</p>
     </div>
   </div>
 </section>
 
+<!-- WORK -->
 <section id="work">
   <div class="section-label fade-up">Selected Work</div>
   <div class="section-title fade-up">A glimpse into what I create.</div>
   <div class="work-grid">
-
     <a href="https://drive.google.com/drive/folders/1VgjAP7WydSALJf9dWr_ZAkqfRxQ8RM6U?usp=drive_link" target="_blank" class="work-card fade-up">
       <div>
         <div class="work-tag">Medical SEO Content</div>
@@ -301,7 +345,6 @@ footer p{font-size:.8rem;color:var(--muted)}
         <span class="view-label">View Samples →</span>
       </div>
     </a>
-
     <a href="https://drive.google.com/drive/folders/1bzntWmVTZ-4KvEENEGCaPWYbfIDeJn4r?usp=drive_link" target="_blank" class="work-card fade-up">
       <div>
         <div class="work-tag">Email &amp; Cold Outreach</div>
@@ -313,7 +356,6 @@ footer p{font-size:.8rem;color:var(--muted)}
         <span class="view-label">View Samples →</span>
       </div>
     </a>
-
     <a href="https://drive.google.com/drive/folders/150xNHgk-zTmRcBM3pA2hRZPSAQQ40FrN?usp=drive_link" target="_blank" class="work-card fade-up">
       <div>
         <div class="work-tag">Luxury Copywriting</div>
@@ -325,7 +367,6 @@ footer p{font-size:.8rem;color:var(--muted)}
         <span class="view-label">View Samples →</span>
       </div>
     </a>
-
     <a href="https://drive.google.com/drive/folders/1SQoN6ik3kAnoJIIbT12LEjBEqvCrwqvJ?usp=drive_link" target="_blank" class="work-card fade-up">
       <div>
         <div class="work-tag">Academic Writing</div>
@@ -337,7 +378,6 @@ footer p{font-size:.8rem;color:var(--muted)}
         <span class="view-label">View Samples →</span>
       </div>
     </a>
-
     <a href="https://drive.google.com/drive/folders/1OUA8uM_Qcf2b2U9JyLQNMxjcypmBxjiF?usp=drive_link" target="_blank" class="work-card fade-up">
       <div>
         <div class="work-tag">Fiction &amp; Creative</div>
@@ -349,7 +389,6 @@ footer p{font-size:.8rem;color:var(--muted)}
         <span class="view-label">View Samples →</span>
       </div>
     </a>
-
     <a href="https://drive.google.com/drive/folders/1bzntWmVTZ-4KvEENEGCaPWYbfIDeJn4r?usp=drive_link" target="_blank" class="work-card fade-up">
       <div>
         <div class="work-tag">Brand Storytelling</div>
@@ -361,45 +400,50 @@ footer p{font-size:.8rem;color:var(--muted)}
         <span class="view-label">View Samples →</span>
       </div>
     </a>
-
   </div>
 </section>
 
+<!-- PROCESS -->
 <section id="process">
   <div class="section-label fade-up">How I Work</div>
   <div class="section-title fade-up">Simple process, exceptional results.</div>
-  <div class="process-container">
-    <div class="process-step fade-up">
-      <div class="step-num">01</div>
-      <div class="step-content">
-        <h3>Discovery &amp; Strategy</h3>
-        <p>I learn your brand, audience, and goals. We align on voice, key messaging, target keywords, and the content angle that will actually move the needle.</p>
+  <div class="process-grid">
+    <div class="process-card fade-up">
+      <div class="process-icon">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
       </div>
+      <div class="process-num">01</div>
+      <h3>Discovery &amp; Strategy</h3>
+      <p>I learn your brand, audience, and goals. We align on voice, key messaging, target keywords, and the content angle that will actually move the needle.</p>
     </div>
-    <div class="process-step fade-up">
-      <div class="step-num">02</div>
-      <div class="step-content">
-        <h3>Research &amp; Outline</h3>
-        <p>Deep-dive into competitors, keyword gaps, and audience intent. I build a structured outline before a single word goes on the page.</p>
+    <div class="process-card fade-up">
+      <div class="process-icon">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
       </div>
+      <div class="process-num">02</div>
+      <h3>Research &amp; Outline</h3>
+      <p>Deep-dive into competitors, keyword gaps, and audience intent. I build a structured outline before a single word goes on the page.</p>
     </div>
-    <div class="process-step fade-up">
-      <div class="step-num">03</div>
-      <div class="step-content">
-        <h3>Write &amp; Refine</h3>
-        <p>First draft. Revisions. Final polish. Every piece goes through multiple rounds to ensure clarity, engagement, and brand alignment.</p>
+    <div class="process-card fade-up">
+      <div class="process-icon">
+        <svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
       </div>
+      <div class="process-num">03</div>
+      <h3>Write &amp; Refine</h3>
+      <p>First draft. Revisions. Final polish. Every piece goes through multiple rounds to ensure clarity, engagement, and brand alignment.</p>
     </div>
-    <div class="process-step fade-up">
-      <div class="step-num">04</div>
-      <div class="step-content">
-        <h3>Deliver &amp; Optimize</h3>
-        <p>You get publish-ready content, formatted and optimized. Post-launch, I'm available for tweaks based on performance data.</p>
+    <div class="process-card fade-up">
+      <div class="process-icon">
+        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
       </div>
+      <div class="process-num">04</div>
+      <h3>Deliver &amp; Optimize</h3>
+      <p>You get publish-ready content, formatted and optimized. Post-launch, I'm available for tweaks based on performance data.</p>
     </div>
   </div>
 </section>
 
+<!-- CTA -->
 <section id="contact" class="cta-section">
   <div class="section-label fade-up">Let's Work Together</div>
   <div class="section-title fade-up" style="text-align:center;">Have a project in mind?<br>Let's make it happen.</div>
@@ -409,7 +453,7 @@ footer p{font-size:.8rem;color:var(--muted)}
   </div>
   <a href="mailto:zohashahzad33@gmail.com" class="cta-email fade-up" style="margin-top:2rem;">zohashahzad33@gmail.com</a>
   <div style="margin-top:1.5rem;" class="fade-up">
-    <a href="https://www.linkedin.com/in/zoha-shahzad-butt/" target="_blank" style="color:var(--muted);font-size:.85rem;text-decoration:none;font-weight:600;transition:color .3s ease;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--muted)'">LinkedIn ↗</a>
+    <a href="https://www.linkedin.com/in/zoha-shahzad-butt/" target="_blank" style="color:var(--muted);font-size:.85rem;text-decoration:none;font-weight:600;transition:color .3s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--muted)'">LinkedIn ↗</a>
   </div>
 </section>
 
