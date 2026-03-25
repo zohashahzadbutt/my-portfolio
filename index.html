@@ -153,13 +153,14 @@ footer p{font-size:.78rem;color:var(--muted)}
   .services-grid,.beyond-grid{grid-template-columns:repeat(2,1fr)}
   .work-grid{grid-template-columns:repeat(2,1fr)}
   .process-grid{grid-template-columns:repeat(2,1fr)}
-  .stats-inner{grid-template-columns:repeat(3,1fr)}
 }
 @media(max-width:900px){
-  .hero{padding:0 1.5rem 3rem}
+  .hero{grid-template-columns:1fr;padding:7rem 1.5rem 3rem;min-height:auto;gap:2.5rem}
   .hero::before{display:none}
+  .hero-name{font-size:clamp(2.8rem,10vw,4.5rem)}
   .hero-intro{grid-template-columns:1fr;gap:1.5rem}
-  .stats-bar{padding:0 1.5rem}
+  .hero-stats{max-width:100%;flex-direction:column;gap:1rem}
+  .hero-stat{padding:1.4rem}
 }
 @media(max-width:768px){
   nav{padding:1rem 1.5rem}
@@ -170,7 +171,13 @@ footer p{font-size:.78rem;color:var(--muted)}
   section{padding:4rem 1.5rem}
   .about-grid{grid-template-columns:1fr;gap:2rem}
   .services-grid,.work-grid,.beyond-grid,.process-grid{grid-template-columns:1fr}
-  .hero{grid-template-columns:1fr}.hero-stats{flex-direction:row;gap:1rem}.hero-stat{flex:1}
+  .hero{padding:6rem 1.2rem 2.5rem;gap:2rem}
+  .hero-name{font-size:2.5rem}
+  .hero-tagline{font-size:1.1rem}
+  .hero-desc{font-size:.95rem}
+  .hero-badge{padding:.8rem 1.2rem}
+  .hero-badge .years{font-size:1.8rem}
+  .hero-stat-info h3{font-size:2rem}
   footer{flex-direction:column;text-align:center;padding:2rem 1.5rem}
 }
 </style>
