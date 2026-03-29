@@ -74,9 +74,10 @@ section{padding:6rem 4rem}
 #about{background:var(--cream)}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
 .about-text p{font-size:1.05rem;line-height:1.85;color:var(--ink2);margin-bottom:1.2rem}
+.about-quote{font-family:'Playfair Display',serif;font-size:1.35rem;font-style:italic;color:var(--accent);line-height:1.5;margin-bottom:1.5rem;padding-left:1.5rem;border-left:3px solid var(--accent)}
 .about-text p:first-of-type::first-letter{font-family:'Playfair Display',serif;font-size:3.8rem;float:left;line-height:.85;margin-right:.5rem;margin-top:.15rem;color:var(--accent);font-weight:700}
 .about-details{display:flex;flex-direction:column;gap:1.3rem;padding-top:1rem}
-.detail-card{background:var(--card);padding:1.4rem 1.6rem;border-radius:10px;border:1px solid var(--border);transition:transform .3s,box-shadow .3s;display:flex;gap:1.1rem;align-items:flex-start}
+.detail-card{background:var(--card);padding:1.5rem 1.6rem;border-radius:10px;border:1px solid var(--border);transition:transform .3s,box-shadow .3s;display:flex;gap:1.1rem;align-items:flex-start;min-height:95px}
 .detail-card:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,.05)}
 .detail-icon{width:38px;height:38px;min-width:38px;border-radius:8px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;margin-top:.15rem}
 .detail-icon svg{width:18px;height:18px;stroke:var(--accent);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
@@ -84,7 +85,7 @@ section{padding:6rem 4rem}
 .detail-card-content p{font-size:.95rem;font-weight:500;line-height:1.5;color:var(--ink)}
 
 /* SERVICES */
-.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.3rem}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;align-items:stretch}
 .service-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:2rem;transition:all .4s;position:relative;overflow:hidden;display:flex;flex-direction:column}
 .service-card::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .4s}
 .service-card:hover::after{transform:scaleX(1)}
@@ -96,31 +97,50 @@ section{padding:6rem 4rem}
 
 /* WORK */
 #work{background:var(--cream)}
-.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;align-items:stretch}
 .work-card{background:var(--card);border-radius:12px;border:1px solid var(--border);padding:2rem;transition:all .4s;cursor:pointer;display:flex;flex-direction:column;justify-content:space-between;text-decoration:none;color:inherit}
 .work-card:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(0,0,0,.06)}
 .work-tag{font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);display:inline-block;padding:.3rem .7rem;border-radius:4px;margin-bottom:1rem;width:fit-content}
 .work-card h3{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;margin-bottom:.6rem;line-height:1.3;color:var(--ink)}
-.work-card p{font-size:.9rem;color:var(--muted);line-height:1.7;margin-bottom:1.3rem;flex-grow:1}
+.work-card p{font-size:.9rem;color:var(--muted);line-height:1.7;margin-bottom:.8rem;flex-grow:1}
 .work-meta{display:flex;justify-content:space-between;align-items:center;padding-top:1rem;border-top:1px solid var(--border)}
 .work-meta span{font-size:.75rem;color:var(--muted);font-weight:500}
 .work-meta .view-label{font-size:.73rem;font-weight:600;color:var(--accent);letter-spacing:.04em}
 .work-card:hover .view-label{text-decoration:underline}
+.work-result{display:flex;align-items:center;gap:.5rem;margin-top:.4rem;margin-bottom:1.3rem}
+.work-result svg{width:14px;height:14px;min-width:14px;stroke:var(--accent);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.work-result span{font-size:.78rem;font-weight:600;color:var(--accent);letter-spacing:.02em}
 
 /* BEYOND */
 #beyond{background:var(--cream)}
-.beyond-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.3rem}
-.beyond-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:2rem;transition:all .4s}
+.beyond-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.3rem;align-items:stretch}
+.beyond-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:2rem;transition:all .4s;display:flex;flex-direction:column}
 .beyond-card:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,.06)}
 .beyond-icon{width:44px;height:44px;border-radius:10px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem}
 .beyond-icon svg{width:22px;height:22px;stroke:var(--accent);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .beyond-card h3{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;margin-bottom:.9rem;color:var(--ink)}
-.beyond-list{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+.beyond-list{list-style:none;display:flex;flex-direction:column;gap:.6rem;flex-grow:1}
 .beyond-list li{display:flex;align-items:flex-start;gap:.6rem;font-size:.9rem;color:var(--muted);line-height:1.6}
 .beyond-list li svg{width:15px;height:15px;min-width:15px;stroke:var(--accent);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;margin-top:2px}
 
+/* TESTIMONIALS */
+#testimonials{background:var(--bg);padding:6rem 4rem}
+.testimonials-grid{display:flex;flex-wrap:wrap;gap:1.3rem;justify-content:center}
+.testimonial-card{width:calc(33.333% - .87rem);min-width:280px}
+.testimonial-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:2rem;transition:all .4s;display:flex;flex-direction:column}
+.testimonial-card:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,.06)}
+.testimonial-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.2rem}
+.testimonial-stars{display:flex;gap:.2rem}
+.testimonial-stars svg{width:14px;height:14px;fill:var(--accent2);stroke:none}
+.testimonial-quote{font-family:'Playfair Display',serif;font-size:2.2rem;color:var(--accent);line-height:1}
+.testimonial-text{font-size:.9rem;color:var(--muted);line-height:1.75;flex-grow:1;margin-bottom:1.5rem}
+.testimonial-author{display:flex;align-items:center;gap:.8rem;padding-top:1.2rem;border-top:1px solid var(--border)}
+.testimonial-avatar{width:38px;height:38px;border-radius:50%;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:.9rem;font-weight:700;color:var(--accent)}
+.testimonial-info h4{font-size:.85rem;font-weight:600;color:var(--ink)}
+.testimonial-info p{font-size:.72rem;color:var(--muted);margin-top:.15rem;font-weight:500}
+
 /* PROCESS */
-.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.3rem}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.3rem;align-items:stretch}
 .process-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:2rem;text-align:center;transition:all .4s;position:relative}
 .process-card::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .4s}
 .process-card:hover::after{transform:scaleX(1)}
@@ -153,6 +173,7 @@ footer p{font-size:.78rem;color:var(--muted)}
   .services-grid,.beyond-grid{grid-template-columns:repeat(2,1fr)}
   .work-grid{grid-template-columns:repeat(2,1fr)}
   .process-grid{grid-template-columns:repeat(2,1fr)}
+  .testimonial-card{width:calc(50% - .65rem)}
 }
 @media(max-width:900px){
   .hero{grid-template-columns:1fr;padding:7rem 1.5rem 3rem;min-height:auto;gap:2.5rem}
@@ -169,8 +190,10 @@ footer p{font-size:.78rem;color:var(--muted)}
   .nav-links.open{display:flex;flex-direction:column;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--dark);justify-content:center;align-items:center;gap:2rem;z-index:150}
   .nav-links.open a{font-size:1.1rem;color:#fff}
   section{padding:4rem 1.5rem}
+  #testimonials{padding:4rem 1.5rem}
   .about-grid{grid-template-columns:1fr;gap:2rem}
   .services-grid,.work-grid,.beyond-grid,.process-grid{grid-template-columns:1fr}
+  .testimonial-card{width:100%}
   .hero{padding:6rem 1.2rem 2.5rem;gap:2rem}
   .hero-name{font-size:2.5rem}
   .hero-tagline{font-size:1.1rem}
@@ -242,14 +265,15 @@ footer p{font-size:.78rem;color:var(--muted)}
     <div class="about-text fade-up">
       <div class="section-label">About Me</div>
       <div class="section-title">Content that connects, copy that converts.</div>
-      <p>From luxury yacht charters to cutting-edge SaaS platforms, I've written for brands across industries that demand precision, personality, and performance. My work sits at the intersection of strategy and storytelling. Every word earns its place.</p>
-      <p>I specialize in turning complex ideas into clear, engaging content that ranks on search engines and resonates with real people. Whether it's a cold email that gets replies, a PPC landing page that converts, an SEO blog that drives organic traffic, or marketing copy that moves the needle, I deliver results.</p>
+      <blockquote class="about-quote">"To write well, you must first learn to read well."</blockquote>
+      <p>That idea shaped everything I do. I started as a reader long before I became a writer, studying how the best content earns attention, builds trust, and drives action. Six years later, that same curiosity fuels my approach. I don't just write content. I research what search engines, AI overviews, and real people actually want, then build every piece around that insight.</p>
+      <p>Today, I specialize in SEO, AEO, and GEO, writing content that ranks on Google, appears in ChatGPT and Perplexity responses, and performs across generative search experiences. From SaaS platforms and healthcare brands to luxury charters and e-commerce, I bring the same precision: strategy first, storytelling always, and every word earning its place.</p>
     </div>
     <div class="about-details fade-up">
-      <div class="detail-card"><div class="detail-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><div class="detail-card-content"><h4>Industries</h4><p>SaaS &amp; Tech, Healthcare &amp; Aesthetics, Luxury &amp; Hospitality, Finance, E-commerce</p></div></div>
+      <div class="detail-card"><div class="detail-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><div class="detail-card-content"><h4>Industries</h4><p>SaaS &amp; Tech, Healthcare &amp; Aesthetics, Luxury &amp; Hospitality, Finance, E-commerce, Education</p></div></div>
       <div class="detail-card"><div class="detail-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div class="detail-card-content"><h4>Expertise</h4><p>SEO Blog Writing, PPC &amp; Landing Page Copy, Email Marketing &amp; Cold Outreach, Copywriting, Creative Writing, Technical &amp; Academic Writing</p></div></div>
       <div class="detail-card"><div class="detail-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><div class="detail-card-content"><h4>Tools &amp; Platforms</h4><p>WordPress, Google Analytics, Google Search Console, SEMrush, Ahrefs, Surfer SEO, HubSpot, Google Ads, Notion, Grammarly, Canva, Google Docs &amp; Sheets</p></div></div>
-      <div class="detail-card"><div class="detail-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><div class="detail-card-content"><h4>Based In</h4><p>Pakistan, working with clients globally across the US, UAE, and Europe</p></div></div>
+      <div class="detail-card"><div class="detail-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><div class="detail-card-content"><h4>Based In</h4><p>Pakistan, working remotely with clients across the United States, UAE, Europe, and beyond</p></div></div>
     </div>
   </div>
 </section>
@@ -258,14 +282,12 @@ footer p{font-size:.78rem;color:var(--muted)}
   <div class="section-label fade-up">What I Do</div>
   <div class="section-title fade-up">Services built around results.</div>
   <div class="services-grid">
-    <div class="service-card fade-up"><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div><h3>SEO &amp; Technical Writing</h3><p>Keyword-optimized articles and technical docs that rank and engage. I write for SEO, AEO, GEO, and AI Overviews. From whitepapers and product docs to how-to guides and deep-dives.</p></div>
-    <div class="service-card fade-up"><div class="service-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></div><h3>PPC &amp; Landing Page Copy</h3><p>High-converting landing pages and PPC ad copy built to maximize click-through rates and lower cost per acquisition. Persuasive headlines, benefit-driven structure, and clear CTAs.</p></div>
-    <div class="service-card fade-up"><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><h3>Email Marketing</h3><p>Welcome sequences, nurture flows, and promotional campaigns crafted to boost open rates, click-throughs, and conversions. Strategic, segmented, and built to drive measurable results.</p></div>
-    <div class="service-card fade-up"><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h3>Cold Email Outreach</h3><p>Multi-step email sequences that cut through inbox noise. Personalized, punchy, and purpose-built to generate replies, book meetings, and open doors for B2B sales teams.</p></div>
-    <div class="service-card fade-up"><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></div><h3>Social Media Content</h3><p>Scroll-stopping captions, carousel copy, LinkedIn posts, and platform-specific content strategies that build engagement, grow your audience, and strengthen brand awareness.</p></div>
-    <div class="service-card fade-up"><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><h3>Copywriting</h3><p>Conversion-focused copy for websites, ads, product one-pagers, sales pages, and product descriptions. Sharp messaging rooted in strategy that speaks to your audience and drives action.</p></div>
-    <div class="service-card fade-up"><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div><h3>Academic &amp; Research Writing</h3><p>Well-structured, thoroughly researched academic papers and business analyses. Clear argumentation, proper formatting, and deep subject-matter expertise across diverse topics.</p></div>
-    <div class="service-card fade-up"><div class="service-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><h3>Creative &amp; Fiction Writing</h3><p>Narrative-driven storytelling, original fiction, and creative pieces that captivate readers. Character development, world-building, and compelling prose across genres and formats.</p></div>
+    <div class="service-card fade-up"><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div><h3>SEO &amp; Technical Writing</h3><p>Keyword-optimized articles and technical documentation that rank and engage. I write for SEO, AEO, GEO, and AI Overviews, covering everything from whitepapers and product docs to how-to guides and industry deep-dives.</p></div>
+    <div class="service-card fade-up"><div class="service-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></div><h3>PPC &amp; Landing Page Copy</h3><p>High-converting landing pages and PPC ad copy built to maximize click-through rates and lower cost per acquisition. Persuasive headlines, benefit-driven structure, and clear calls to action that turn traffic into conversions.</p></div>
+    <div class="service-card fade-up"><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><h3>Email &amp; Outreach</h3><p>Welcome sequences, nurture flows, promotional campaigns, and multi-step cold outreach cadences. From strategic email marketing that boosts open rates to personalized B2B sequences that generate replies and book meetings.</p></div>
+    <div class="service-card fade-up"><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><h3>Copywriting</h3><p>Conversion-focused copy for websites, ads, product one-pagers, sales pages, and product descriptions. Sharp messaging rooted in strategy and persuasion that speaks directly to your audience and drives them to take action.</p></div>
+    <div class="service-card fade-up"><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></div><h3>Social Media Content</h3><p>Scroll-stopping captions, carousel copy, LinkedIn posts, and platform-specific content strategies. Built to grow your audience, strengthen brand awareness, and turn engagement into meaningful business results.</p></div>
+    <div class="service-card fade-up"><div class="service-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div><h3>Academic &amp; Creative Writing</h3><p>Thoroughly researched academic papers, business analyses, original fiction, and creative narratives. Clear argumentation meets compelling storytelling, with deep subject-matter expertise across diverse topics and genres.</p></div>
   </div>
 </section>
 
@@ -273,12 +295,44 @@ footer p{font-size:.78rem;color:var(--muted)}
   <div class="section-label fade-up">Selected Work</div>
   <div class="section-title fade-up">A glimpse into what I create.</div>
   <div class="work-grid">
-    <a href="https://drive.google.com/drive/folders/1VgjAP7WydSALJf9dWr_ZAkqfRxQ8RM6U?usp=drive_link" target="_blank" class="work-card fade-up"><div><div class="work-tag">Medical SEO Content</div><h3>Healthcare &amp; Aesthetics Blog Suite</h3><p>SEO-optimized long-form articles covering cosmetic treatments, dermatology, and trichology. Keyword-targeted, medically accurate, and written to rank on Google.</p></div><div class="work-meta"><span>SEO Blog Writing, Healthcare</span><span class="view-label">View Samples →</span></div></a>
-    <a href="https://drive.google.com/drive/folders/1bzntWmVTZ-4KvEENEGCaPWYbfIDeJn4r?usp=drive_link" target="_blank" class="work-card fade-up"><div><div class="work-tag">Email &amp; Cold Outreach</div><h3>B2B Cold Email Sequences &amp; Marketing Campaigns</h3><p>Multi-step cold outreach cadences targeting SaaS, venture capital, and fintech verticals. Plus email marketing campaigns for tech companies built to convert.</p></div><div class="work-meta"><span>Cold Email, Email Marketing</span><span class="view-label">View Samples →</span></div></a>
-    <a href="https://drive.google.com/drive/folders/150xNHgk-zTmRcBM3pA2hRZPSAQQ40FrN?usp=drive_link" target="_blank" class="work-card fade-up"><div><div class="work-tag">Luxury Copywriting</div><h3>Luxury Yacht Charter Listings</h3><p>High-end listing descriptions for premium yacht charters in Dubai. Aspirational brand voice blended with SEO-friendly structure to drive bookings.</p></div><div class="work-meta"><span>Copywriting, Luxury &amp; Hospitality</span><span class="view-label">View Samples →</span></div></a>
-    <a href="https://drive.google.com/drive/folders/1SQoN6ik3kAnoJIIbT12LEjBEqvCrwqvJ?usp=drive_link" target="_blank" class="work-card fade-up"><div><div class="work-tag">Academic Writing</div><h3>Business &amp; Industry Research Papers</h3><p>Research-intensive academic writing covering online business strategy, hospitality and tourism industry analysis, and market research with structured argumentation.</p></div><div class="work-meta"><span>Academic, Research</span><span class="view-label">View Samples →</span></div></a>
-    <a href="https://drive.google.com/drive/folders/1OUA8uM_Qcf2b2U9JyLQNMxjcypmBxjiF?usp=drive_link" target="_blank" class="work-card fade-up"><div><div class="work-tag">Fiction &amp; Creative</div><h3>Fiction &amp; Creative Storytelling</h3><p>Original fiction pieces and creative narratives showcasing storytelling range, character development, and compelling prose across different genres and formats.</p></div><div class="work-meta"><span>Fiction, Creative Writing</span><span class="view-label">View Samples →</span></div></a>
-    <a href="https://drive.google.com/drive/folders/1bzntWmVTZ-4KvEENEGCaPWYbfIDeJn4r?usp=drive_link" target="_blank" class="work-card fade-up"><div><div class="work-tag">Brand Storytelling</div><h3>Brand Narrative &amp; Strategy Email Campaign</h3><p>Emotionally driven brand story, messaging guidelines, and email campaign. A compelling narrative that aligns brand voice with audience engagement and clear calls to action.</p></div><div class="work-meta"><span>Brand Strategy, Email</span><span class="view-label">View Samples →</span></div></a>
+    <a href="https://drive.google.com/drive/folders/1VgjAP7WydSALJf9dWr_ZAkqfRxQ8RM6U?usp=drive_link" target="_blank" class="work-card fade-up"><div><div class="work-tag">Medical SEO Content</div><h3>Healthcare &amp; Aesthetics Blog Suite</h3><p>SEO-optimized long-form articles covering cosmetic treatments, dermatology, and trichology. Keyword-targeted, medically accurate, and structured to rank on Google.</p><div class="work-result"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg><span>Ranked top 5 on SERPs for target keywords</span></div></div><div class="work-meta"><span>SEO Blog Writing, Healthcare</span><span class="view-label">View Samples →</span></div></a>
+    <a href="https://drive.google.com/drive/folders/1bzntWmVTZ-4KvEENEGCaPWYbfIDeJn4r?usp=drive_link" target="_blank" class="work-card fade-up"><div><div class="work-tag">Email &amp; Cold Outreach</div><h3>B2B Cold Email Sequences &amp; Marketing Campaigns</h3><p>Multi-step cold outreach cadences targeting SaaS, venture capital, and fintech verticals. Plus strategic email marketing campaigns for tech companies designed to convert.</p><div class="work-result"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>Achieved 20-25% reply rate</span></div></div><div class="work-meta"><span>Cold Email, Email Marketing</span><span class="view-label">View Samples →</span></div></a>
+    <a href="https://drive.google.com/drive/folders/150xNHgk-zTmRcBM3pA2hRZPSAQQ40FrN?usp=drive_link" target="_blank" class="work-card fade-up"><div><div class="work-tag">Luxury Copywriting</div><h3>Luxury Yacht Charter Listings</h3><p>High-end listing descriptions for premium yacht charters in Dubai. Aspirational brand voice blended with SEO-friendly structure designed to drive inquiries and bookings.</p><div class="work-result"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg><span>10% increase in booking inquiries</span></div></div><div class="work-meta"><span>Copywriting, Luxury &amp; Hospitality</span><span class="view-label">View Samples →</span></div></a>
+    <a href="https://drive.google.com/drive/folders/1SQoN6ik3kAnoJIIbT12LEjBEqvCrwqvJ?usp=drive_link" target="_blank" class="work-card fade-up"><div><div class="work-tag">Academic Writing</div><h3>Business &amp; Industry Research Papers</h3><p>Research-intensive academic writing covering online business strategy, hospitality and tourism industry analysis, and market research with structured argumentation.</p><div class="work-result"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>A-grade results across all submissions</span></div></div><div class="work-meta"><span>Academic, Research</span><span class="view-label">View Samples →</span></div></a>
+    <a href="https://drive.google.com/drive/folders/1OUA8uM_Qcf2b2U9JyLQNMxjcypmBxjiF?usp=drive_link" target="_blank" class="work-card fade-up"><div><div class="work-tag">Fiction &amp; Creative</div><h3>Fiction &amp; Creative Storytelling</h3><p>Original fiction pieces and creative narratives showcasing storytelling range, character development, and compelling prose across different genres and written formats.</p><div class="work-result"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><span>Published across multiple formats and genres</span></div></div><div class="work-meta"><span>Fiction, Creative Writing</span><span class="view-label">View Samples →</span></div></a>
+    <a href="https://drive.google.com/drive/folders/1bzntWmVTZ-4KvEENEGCaPWYbfIDeJn4r?usp=drive_link" target="_blank" class="work-card fade-up"><div><div class="work-tag">Brand Storytelling</div><h3>Brand Narrative &amp; Strategy Email Campaign</h3><p>Emotionally driven brand story, messaging guidelines, and email campaign. A compelling narrative that aligns brand voice with audience engagement and action.</p><div class="work-result"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg><span>Boosted engagement through strategic storytelling</span></div></div><div class="work-meta"><span>Brand Strategy, Email</span><span class="view-label">View Samples →</span></div></a>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="section-label fade-up">What People Say</div>
+  <div class="section-title fade-up">Trusted by teams across industries.</div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card fade-up">
+      <div class="testimonial-top"><div class="testimonial-quote">&ldquo;</div><div class="testimonial-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div></div>
+      <p class="testimonial-text">Zoha has an incredibly sharp mind and helped our team get found on Google Search and AEO, appearing as the top answer on ChatGPT and Perplexity for highly targeted keywords. Loved working with her.</p>
+      <div class="testimonial-author"><div class="testimonial-avatar">R</div><div class="testimonial-info"><h4>Rishi Mathur</h4><p>Content Marketing Lead</p></div></div>
+    </div>
+    <div class="testimonial-card fade-up">
+      <div class="testimonial-top"><div class="testimonial-quote">&ldquo;</div><div class="testimonial-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div></div>
+      <p class="testimonial-text">Zoha has a real talent for creating copy that resonates with audiences, driving engagement and action. Her ability to match her writing style with brand voice makes her content not just readable, but impactful.</p>
+      <div class="testimonial-author"><div class="testimonial-avatar">S</div><div class="testimonial-info"><h4>Suman Khan</h4><p>Creative Head</p></div></div>
+    </div>
+    <div class="testimonial-card fade-up">
+      <div class="testimonial-top"><div class="testimonial-quote">&ldquo;</div><div class="testimonial-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div></div>
+      <p class="testimonial-text">I highly recommend Zoha. She is incredibly efficient and a fantastic team player. Her dedication and teamwork make her an invaluable asset. Grateful for the quality content she consistently delivers.</p>
+      <div class="testimonial-author"><div class="testimonial-avatar">M</div><div class="testimonial-info"><h4>Marya Ahmed</h4><p>Senior Marketing Strategist</p></div></div>
+    </div>
+    <div class="testimonial-card fade-up">
+      <div class="testimonial-top"><div class="testimonial-quote">&ldquo;</div><div class="testimonial-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div></div>
+      <p class="testimonial-text">Zoha demonstrates a strong grasp of content creation, writing, and SEO. Her ability to produce creative, idea-driven content adds great value to any team. Her commitment to meeting deadlines is commendable.</p>
+      <div class="testimonial-author"><div class="testimonial-avatar">H</div><div class="testimonial-info"><h4>Humayoun Mussawar</h4><p>Marketing Growth Manager</p></div></div>
+    </div>
+    <div class="testimonial-card fade-up">
+      <div class="testimonial-top"><div class="testimonial-quote">&ldquo;</div><div class="testimonial-stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div></div>
+      <p class="testimonial-text">Zoha is leading the way with AI Overview and GEO ranking research. While most are still figuring it out, she has already cracked it. A smart approach to gaining visibility and results within days, not weeks.</p>
+      <div class="testimonial-author"><div class="testimonial-avatar">W</div><div class="testimonial-info"><h4>Waqas Mushtaq</h4><p>Marketing Director</p></div></div>
+    </div>
   </div>
 </section>
 
@@ -287,9 +341,9 @@ footer p{font-size:.78rem;color:var(--muted)}
   <div class="section-title fade-up">Simple process, exceptional results.</div>
   <div class="process-grid">
     <div class="process-card fade-up"><div class="process-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><div class="process-num">01</div><h3>Discovery &amp; Strategy</h3><p>I learn your brand, audience, and goals. We align on voice, messaging, target keywords, and the content angle that will move the needle.</p></div>
-    <div class="process-card fade-up"><div class="process-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div class="process-num">02</div><h3>Research &amp; Outline</h3><p>Deep-dive into competitors, keyword gaps, and audience intent. I build a structured outline before a single word goes on the page.</p></div>
+    <div class="process-card fade-up"><div class="process-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div class="process-num">02</div><h3>Research &amp; Outline</h3><p>Deep-dive into competitors, keyword gaps, and audience intent. I build a clear, structured outline before a single word hits the page.</p></div>
     <div class="process-card fade-up"><div class="process-icon"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div><div class="process-num">03</div><h3>Write &amp; Refine</h3><p>First draft. Revisions. Final polish. Every piece goes through multiple rounds to ensure clarity, engagement, and brand alignment.</p></div>
-    <div class="process-card fade-up"><div class="process-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="process-num">04</div><h3>Deliver &amp; Optimize</h3><p>You get publish-ready content, formatted and optimized. Post-launch, I'm available for tweaks based on performance data.</p></div>
+    <div class="process-card fade-up"><div class="process-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="process-num">04</div><h3>Deliver &amp; Optimize</h3><p>You get publish-ready content, formatted and fully optimized. Post-launch, I'm available for performance-based tweaks and iterations.</p></div>
   </div>
 </section>
 
@@ -307,10 +361,11 @@ footer p{font-size:.78rem;color:var(--muted)}
 <section id="contact" class="cta-section">
   <div class="section-label fade-up">Let's Work Together</div>
   <div class="section-title fade-up" style="text-align:center;">Have a project in mind?<br>Let's make it happen.</div>
-  <p class="cta-sub fade-up">I'm currently accepting new clients for blog writing, PPC landing pages, email marketing, content audits, and copywriting projects. Drop me a line.</p>
-  <div class="fade-up"><a href="mailto:zohashahzad33@gmail.com" class="btn-primary" style="font-size:1rem;padding:1rem 2.5rem;">Start a Conversation →</a></div>
-  <a href="mailto:zohashahzad33@gmail.com" class="cta-email fade-up" style="margin-top:2rem;">zohashahzad33@gmail.com</a>
-  <div style="margin-top:1.5rem;" class="fade-up"><a href="https://www.linkedin.com/in/zoha-shahzad-butt/" target="_blank" style="color:rgba(255,255,255,.4);font-size:.85rem;text-decoration:none;font-weight:600;transition:color .3s;" onmouseover="this.style.color='var(--accent2)'" onmouseout="this.style.color='rgba(255,255,255,.4)'">LinkedIn ↗</a></div>
+  <p class="cta-sub fade-up">I'm currently open for new projects in SEO content, email marketing, PPC landing pages, content audits, and copywriting. Let's talk about what you need.</p>
+  <div class="fade-up" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:.5rem">
+    <a href="mailto:zohashahzad33@gmail.com" class="btn-primary" style="font-size:1rem;padding:1rem 2.5rem;">Email Me →</a>
+    <a href="https://www.linkedin.com/in/zoha-shahzad-butt/" target="_blank" class="btn-secondary" style="font-size:1rem;padding:1rem 2.5rem;color:#fff;border-color:rgba(255,255,255,.25);">Connect on LinkedIn</a>
+  </div>
 </section>
 
 <footer>
